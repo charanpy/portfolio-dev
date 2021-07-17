@@ -9,14 +9,13 @@ export const ThemeContext = React.createContext({
 });
 
 const CustomThemeProvider = ({ children }) => {
-  const customTheme = useDarkMode(false, { storageKey: null, onChange: null });
+  const customTheme = useDarkMode(true, { storageKey: null, onChange: null });
   const theme = customTheme.value ? darkTheme : lightTheme;
   const [mounted, setMounted] = React.useState(false);
 
   React.useEffect(() => {
     setMounted(true);
   }, []);
-
   const toggleTheme = () => {
     customTheme.toggle();
     console.log('theme', customTheme);

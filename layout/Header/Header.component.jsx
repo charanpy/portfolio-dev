@@ -1,15 +1,25 @@
 import React from 'react';
-import { Header, HeaderName } from './Header.style';
+import NavigationProvider from '../../providers/NavigationProvider';
+import Image from 'next/image';
+import { Header, HeaderNameContainer } from './Header.style';
 import Navbar from './Navbar.component';
 
 const HeaderComponent = () => {
   return (
-    <Header>
-      <div>
-        <HeaderName>Charan</HeaderName>
-      </div>
-      <Navbar />
-    </Header>
+    <NavigationProvider>
+      <Header>
+        <HeaderNameContainer>
+          <Image
+            src='/img.png'
+            alt='Logo'
+            width={30}
+            height={30}
+            quality='100'
+          />
+        </HeaderNameContainer>
+        <Navbar />
+      </Header>
+    </NavigationProvider>
   );
 };
 

@@ -1,6 +1,12 @@
 import Head from 'next/head';
+import ContactComponent from '../components/Contact/Contact.component';
 import Intro from '../components/Intro/Intro';
 import Container from '../layout/Container/Container.component';
+import ClipboardComponent from '../components/Clipboard/Clipboard.component';
+import AboutComponent from '../components/About/About.component';
+import SkillComponent from '../components/Skills/Skills.component';
+import ProjectOverviewComponent from '../components/ProjectOverview/ProjectOverview.component';
+import CollabrateComponent from '../components/Collobrate/Collobrate.component';
 
 const Home = () => {
   return (
@@ -12,6 +18,12 @@ const Home = () => {
       </Head>
       <Container>
         <Intro />
+        <ContactComponent />
+        <ClipboardComponent />
+        <SkillComponent />
+        <AboutComponent />
+        <ProjectOverviewComponent />
+        <CollabrateComponent />
       </Container>
     </>
   );

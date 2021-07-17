@@ -1,5 +1,5 @@
 import React from 'react';
-import Image from 'next/image';
+import ButtonComponent from '../Button/Button.component';
 import {
   IntroContainer,
   IntroWrapper,
@@ -7,29 +7,42 @@ import {
   FieldText,
   FieldTextColor,
   AboutMe,
-  CoverWrapper,
+  Highlight,
+  AnimationContainer,
 } from './Intro.style';
 
 const Intro = () => {
+  console.log('Intro');
   return (
-    <IntroContainer>
+    <IntroContainer id='#'>
       <IntroWrapper>
-        <Field>TECHNOLOGY</Field>
-        <FieldText>I&apos;m Charan</FieldText>
-        <FieldTextColor>Full&nbsp;Stack&nbsp;Developer</FieldTextColor>
-        <AboutMe>
-          I build web apps which is responsive and highly performant
-        </AboutMe>
+        <div>
+          <Field>Hi, my name is</Field>
+        </div>
+        <div>
+          <FieldText>Charan,</FieldText>
+        </div>
+        <div>
+          <FieldTextColor>Full Stack Developer.</FieldTextColor>
+        </div>
+        <div>
+          <AboutMe>
+            Full stack and <Highlight>React native</Highlight> developer from
+            India. I enjoy building websites and web apps which is responsive
+            and highly performant.
+          </AboutMe>
+        </div>
+        <AnimationContainer
+          animate={{ opacity: 1 }}
+          transition={{
+            type: 'spring',
+            ease: 'linear',
+            delay: 2,
+          }}
+        >
+          <ButtonComponent>Resume</ButtonComponent>
+        </AnimationContainer>
       </IntroWrapper>
-      <CoverWrapper>
-        <Image
-          src='/cover.jpg'
-          width={350}
-          height={260}
-          objectFit='cover'
-          alt='cover-image'
-        />
-      </CoverWrapper>
     </IntroContainer>
   );
 };

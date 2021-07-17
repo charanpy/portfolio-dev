@@ -9,6 +9,7 @@ export const ArrowContainer = styled.div`
 export const Arrow = styled.span`
   font-size: 2rem;
   color: ${(props) => props?.theme?.color || '#000'};
+  display: flex;
 `;
 
 export const ImageContainer = styled(ArrowContainer)``;

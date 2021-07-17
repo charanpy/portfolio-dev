@@ -1,10 +1,13 @@
+import React from 'react';
 import Head from 'next/head';
 import CustomThemeProvider from '../providers/ThemeProvider';
+import AlertProvider from '../providers/ModalProvider';
 import Header from '../layout/Header/Header.component';
 import GlobalStyle from '../styles/global.style';
 import '../styles/globals.css';
+import PageTransition from '../layout/PageTransition/PageTransition.component';
 
-function MyApp({ Component, pageProps }) {
+function MyApp({ Component, pageProps, router }) {
   return (
     <>
       <Head>
@@ -12,9 +15,13 @@ function MyApp({ Component, pageProps }) {
       </Head>
 
       <CustomThemeProvider>
-        <GlobalStyle />
-        <Header />
-        <Component {...pageProps} />
+        <AlertProvider>
+          <GlobalStyle />
+          <Header />
+          <PageTransition route={router.route}>
+            <Component {...pageProps} />
+          </PageTransition>
+        </AlertProvider>
       </CustomThemeProvider>
     </>
   );

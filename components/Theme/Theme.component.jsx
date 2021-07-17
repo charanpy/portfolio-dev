@@ -1,14 +1,15 @@
 import React, { useContext } from 'react';
 import Image from 'next/image';
 import NavLink from '../../layout/Header/NavLink.component';
+
 import { ThemeContext } from '../../providers/ThemeProvider';
 import { Arrow, ArrowContainer, ImageContainer } from './Theme.style';
 
-const ThemeComponent = () => {
+const ThemeComponent = ({ mobile }) => {
   const { theme, toggleTheme } = useContext(ThemeContext);
   return (
     <div onClick={toggleTheme}>
-      <NavLink>
+      <NavLink visible>
         <ArrowContainer>
           <Arrow>
             {theme ? (
@@ -23,7 +24,8 @@ const ThemeComponent = () => {
                   objectFit='contain'
                 />
               </ImageContainer>
-            )}
+            )}{' '}
+            {mobile ? 'Theme' : ''}
           </Arrow>
         </ArrowContainer>
       </NavLink>
