@@ -9,7 +9,6 @@ import {
   ContentWrapper,
   ImageContainer,
 } from './About.style';
-import SkillsComponent from './Skills.component';
 import SkillContainerComponent from './SkillContainer.component';
 import { skills } from './helper';
 
