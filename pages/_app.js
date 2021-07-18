@@ -3,7 +3,7 @@ import Head from 'next/head';
 import CustomThemeProvider from '../providers/ThemeProvider';
 import AlertProvider from '../providers/ModalProvider';
 import Header from '../layout/Header/Header.component';
-import GlobalStyle from '../styles/global.style';
+import GlobalStyle from '../styles/Global.style';
 import '../styles/globals.css';
 import PageTransition from '../layout/PageTransition/PageTransition.component';
 
