@@ -10,6 +10,8 @@ import {
   ImageContainer,
 } from './About.style';
 import SkillsComponent from './Skills.component';
+import SkillContainerComponent from './SkillContainer.component';
+import { skills } from './helper';
 
 const AboutComponent = () => {
   console.log('About');
@@ -35,7 +37,7 @@ const AboutComponent = () => {
                 recently:
                 <br />
                 <br />
-                <SkillsComponent />
+                <SkillContainerComponent technology={skills} />
               </AboutText>
             </ContentWrapper>
             <ContentWrapper>

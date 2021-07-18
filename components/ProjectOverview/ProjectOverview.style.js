@@ -89,5 +89,5 @@ export const ProjectButton = styled.div`
 `;
 
 export const ProjectImage = styled(Image)`
-  opacity: 0.7;
+  opacity: ${(props) => (props.theme.isDark ? 0.7 : 1)};
 `;

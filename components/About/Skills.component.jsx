@@ -1,18 +1,13 @@
 import React from 'react';
 import ListComponent from '../svg/List/List.component';
-import { Skill, SkillName, SkillsContainer } from './About.style';
-import { skills } from './helper';
+import { Skill, SkillName } from './About.style';
 
-const SkillsComponent = () => {
+const SkillsComponent = ({ skill }) => {
   return (
-    <SkillsContainer>
-      {skills.map((skill) => (
-        <Skill key={skill}>
-          <ListComponent small />
-          <SkillName>{skill}</SkillName>
-        </Skill>
-      ))}
-    </SkillsContainer>
+    <Skill>
+      <ListComponent small />
+      <SkillName>{skill}</SkillName>
+    </Skill>
   );
 };
 

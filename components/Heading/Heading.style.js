@@ -5,7 +5,7 @@ export const Header = styled.h1`
   font-weight: 600;
   color: ${(props) => props.theme.light};
   position: relative;
-  margin-bottom: 6rem;
+  margin-bottom: ${(props) => (props.mb ? '1.5rem' : '6rem')};
   width: fit-content;
 
   &::after {

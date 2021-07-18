@@ -81,5 +81,5 @@ export const CoverWrapper = styled.div`
 `;
 
 export const AnimationContainer = styled(motion.div)`
-  /* opacity: 0; */
+  opacity: 0;
 `;

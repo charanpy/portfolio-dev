@@ -35,13 +35,13 @@ export const ContentWrapper = styled.div`
 export const SkillsContainer = styled.div`
   ${flex};
   ${flexCenter};
-  justify-content: space-evenly;
+  justify-content: flex-start;
   flex-wrap: wrap;
 `;
 export const Skill = styled.div`
   ${flex};
   font-weight: 200;
-  width: 30%;
+  min-width: 30%;
   justify-content: flex-start;
   @media (max-width: 790px) {
     width: 50%;

@@ -6,23 +6,15 @@ import { projects } from './helper';
 import ProjectComponent from './Project.component';
 import { ProjectButton, ProjectContainer } from './ProjectOverview.style';
 import LinkComponent from '../Link/Link.component';
+import { featuredProject } from '../../data/projects';
+import ProjectContainerComponent from './ProjectContainer.component';
 
 const ProjectOverviewComponent = () => {
   return (
     <section id='project-overview' className='pd'>
       <ScrollAnimation>
         <HeadingComponent>Projects</HeadingComponent>
-        <ProjectContainer>
-          {projects.map(({ src, alt, link, github }) => (
-            <ProjectComponent
-              key={src}
-              src={src}
-              alt={alt}
-              link={link}
-              github={github}
-            />
-          ))}
-        </ProjectContainer>
+        <ProjectContainerComponent projects={featuredProject} />
         <LinkComponent path='/projects'>
           <ProjectButton>
             <ButtonComponent>More Projects</ButtonComponent>
