@@ -18,6 +18,7 @@ const ProjectComponent = ({
   github,
   description,
   navigate: path,
+  about,
 }) => {
   const navigate = () => {
     console.log();
@@ -26,6 +27,7 @@ const ProjectComponent = ({
     }
     return;
   };
+
   return (
     <>
       <ImageContainer className='cursor' role='button'>
@@ -41,7 +43,7 @@ const ProjectComponent = ({
             blurDataURL='/shopify.png'
           />
         </div>
-        {description ? (
+        {description && about ? (
           <LinkComponent path={`/projects/${path}`}>
             <ButtonContainer>
               <Button

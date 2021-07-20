@@ -11,7 +11,7 @@ const ProjectDetailComponent = ({ project }) => {
   return (
     <>
       <HeadingComponent>{title && title}</HeadingComponent>
-      <ProjectContainerComponent projects={[project]} />
+      <ProjectContainerComponent projects={[project]} about={false} />
       <Wrapper>
         <HeadingComponent mb>Description</HeadingComponent>
         <SkillName>{description && description}.</SkillName>

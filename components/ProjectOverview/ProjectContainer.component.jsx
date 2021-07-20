@@ -2,7 +2,7 @@ import React from 'react';
 import ProjectComponent from './Project.component';
 import { ProjectContainer } from './ProjectOverview.style';
 
-const ProjectContainerComponent = ({ projects }) => {
+const ProjectContainerComponent = ({ projects, about = true }) => {
   return (
     <ProjectContainer>
       {projects.map(({ image, title, website, github, description, key }) => (
@@ -14,6 +14,7 @@ const ProjectContainerComponent = ({ projects }) => {
           github={github}
           description={description}
           navigate={key}
+          about={about}
         />
       ))}
     </ProjectContainer>

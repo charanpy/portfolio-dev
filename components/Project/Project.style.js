@@ -34,4 +34,7 @@ export const CategoryContainer = styled.div`
   ${flex};
   flex-wrap: wrap;
   margin-bottom: 4rem;
+  @media (max-width: 790px) {
+    justify-content: space-evenly;
+  }
 `;
