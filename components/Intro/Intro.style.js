@@ -63,7 +63,7 @@ export const AboutMe = styled.h1`
   font-size: 1.9rem;
   font-weight: 500;
   margin-top: 1.5rem;
-  color: ${(props) => props.theme.lighter};
+  color: ${(props) => props.theme.light};
   margin: 10px 0px 0px 0.2rem;
   max-width: 540px;
   line-height: 1.7;

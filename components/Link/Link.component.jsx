@@ -5,9 +5,9 @@ import { Anchor } from './Link.style';
 const LinkComponent = ({ path, children, center = true }) => {
   return (
     <Link href={path} passHref>
-      <Anchor center={center} href='#'>
-        {children}
-      </Anchor>
+      {/* <Anchor center={center} href='#'> */}
+      {children}
+      {/* </Anchor> */}
     </Link>
   );
 };

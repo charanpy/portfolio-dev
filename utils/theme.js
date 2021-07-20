@@ -8,7 +8,8 @@ export const light = {
   slate: '#212529',
   lighter: 'rgba(0,0,0,0.7)',
   nav: '#4070F4',
-  secondary: '#4070F4',
+  // secondary: '#4070F4',
+  secondary: '#0275d8',
   secondaryHover: '#2C98FF',
   boxShadow: 'rgba(0,0,0, 0.7)',
 };

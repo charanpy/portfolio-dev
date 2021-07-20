@@ -1,35 +1,20 @@
 import React, { useContext } from 'react';
-import Image from 'next/image';
 import NavLink from '../../layout/Header/NavLink.component';
 
 import { ThemeContext } from '../../providers/ThemeProvider';
-import { Arrow, ArrowContainer, ImageContainer } from './Theme.style';
+import { Arrow, ArrowContainer } from './Theme.style';
+import MoonComponent from '../svg/Moon/Moon.component';
 
 const ThemeComponent = ({ mobile }) => {
   const { theme, toggleTheme } = useContext(ThemeContext);
   return (
-    <div onClick={toggleTheme}>
-      <NavLink visible>
-        <ArrowContainer>
-          <Arrow>
-            {theme ? (
-              <>&#9728;</>
-            ) : (
-              <ImageContainer style={{ display: 'flex', alignItems: 'center' }}>
-                <Image
-                  src='/moon.png'
-                  width={20}
-                  height={20}
-                  alt='dark theme'
-                  objectFit='contain'
-                />
-              </ImageContainer>
-            )}{' '}
-            {mobile ? 'Theme' : ''}
-          </Arrow>
-        </ArrowContainer>
-      </NavLink>
-    </div>
+    <NavLink visible navigate={toggleTheme} anchor={false}>
+      <ArrowContainer>
+        <Arrow>
+          {theme ? <>&#9728;</> : <MoonComponent />} {mobile ? 'Theme' : ''}
+        </Arrow>
+      </ArrowContainer>
+    </NavLink>
   );
 };
 

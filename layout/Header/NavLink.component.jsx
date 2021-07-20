@@ -9,6 +9,7 @@ const NavLink = ({
   path,
   active,
   visible,
+  anchor = true,
 }) => {
   return (
     <NavList
@@ -17,7 +18,9 @@ const NavLink = ({
       onClick={navigate}
       visible={visible}
     >
-      {custom ? (
+      {!anchor ? (
+        <>{children}</>
+      ) : custom ? (
         <Router href={path} passHref>
           <Link href='#' active={path === active}>
             {children}
