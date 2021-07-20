@@ -10,7 +10,7 @@ const HeaderComponent = () => {
       <Header>
         <HeaderNameContainer>
           <Image
-            src='/img.png'
+            src='/logo.png'
             alt='Logo'
             width={30}
             height={30}

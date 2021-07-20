@@ -14,7 +14,7 @@ const ContactList = () => {
       <Navigator href='https://www.instagram.com/charan030702/'>
         <InstagramComponent />
       </Navigator>
-      <Navigator>
+      <Navigator href='https://www.linkedin.com/in/dp-charan-497209191/'>
         <LinkedinComponent />
       </Navigator>
       <Navigator href='#'>

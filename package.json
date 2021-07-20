@@ -11,6 +11,7 @@
   "dependencies": {
     "framer-motion": "^4.1.17",
     "next": "11.0.1",
+    "nodemailer": "^6.6.3",
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "react-intersection-observer": "^8.32.0",
@@ -22,6 +23,7 @@
     "eslint": "7.30.0",
     "eslint-config-next": "11.0.1"
   },
-  "eslintIgnore": ["node_modules"]
-
+  "eslintIgnore": [
+    "node_modules"
+  ]
 }
