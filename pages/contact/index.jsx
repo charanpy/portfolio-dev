@@ -1,12 +1,16 @@
 import React from 'react';
 import ContactMeComponent from '../../components/ContactMe/ContactMe.component';
 import Container from '../../layout/Container/Container.component';
+import Seo from '../../layout/Seo/Seo';
 
 const contact = () => {
   return (
-    <Container>
-      <ContactMeComponent />
-    </Container>
+    <>
+      <Seo title='Contact' description='Contact me to collobrate or discuss' />
+      <Container>
+        <ContactMeComponent />
+      </Container>
+    </>
   );
 };
 

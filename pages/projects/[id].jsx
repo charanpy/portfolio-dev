@@ -3,6 +3,7 @@ import { useRouter } from 'next/router';
 import Container from '../../layout/Container/Container.component';
 import { projects } from '../../data/projects';
 import ProjectDetailComponent from '../../components/ProjectDetail/ProjectDetail.component';
+import Seo from '../../layout/Seo/Seo';
 
 const ProjectId = () => {
   const [projectData, setProjectData] = useState(null);
@@ -25,7 +26,15 @@ const ProjectId = () => {
   return (
     <Container>
       {projectData !== null ? (
-        <ProjectDetailComponent project={projectData} />
+        <>
+          <Seo
+            title={projectData.title}
+            description={projectData.description}
+            ogTitle={projectData.title}
+            ogImage={projectData.image}
+          />
+          <ProjectDetailComponent project={projectData} />
+        </>
       ) : (
         ''
       )}
