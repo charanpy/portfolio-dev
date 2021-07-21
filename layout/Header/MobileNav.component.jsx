@@ -6,7 +6,7 @@ const variants = {
   open: { opacity: 1, x: 0 },
   closed: { opacity: 0, x: '200%' },
 };
-const MobileNavComponent = ({ isOpen }) => {
+const MobileNavComponent = ({ isOpen, toggleNavbar }) => {
   return (
     <MobileNavContainer
       animate={isOpen ? 'open' : 'closed'}
@@ -14,7 +14,7 @@ const MobileNavComponent = ({ isOpen }) => {
       transition={{ ease: 'easeOut', duration: 0.5 }}
     >
       <MobileNavWrapper>
-        <SharedLinkComponent mobile />
+        <SharedLinkComponent mobile toggleNavbar={toggleNavbar} />
       </MobileNavWrapper>
     </MobileNavContainer>
   );

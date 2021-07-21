@@ -7,7 +7,6 @@ import { Wrapper } from './ProjectDetail.style';
 
 const ProjectDetailComponent = ({ project }) => {
   const { title, description, technology, features } = project;
-  console.log(project, 89);
   return (
     <>
       <HeadingComponent>{title && title}</HeadingComponent>

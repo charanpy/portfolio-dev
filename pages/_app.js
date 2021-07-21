@@ -6,6 +6,8 @@ import Header from '../layout/Header/Header.component';
 import GlobalStyle from '../styles/Global.style';
 import '../styles/globals.css';
 import PageTransition from '../layout/PageTransition/PageTransition.component';
+import ToastrComponent from '../components/Toastr/Toastr.component';
+import ToastrProvider from '../providers/ToastrProvider';
 
 function MyApp({ Component, pageProps, router }) {
   return (
@@ -17,11 +19,14 @@ function MyApp({ Component, pageProps, router }) {
 
       <CustomThemeProvider>
         <AlertProvider>
-          <GlobalStyle />
-          <Header />
-          <PageTransition route={router.route}>
-            <Component {...pageProps} />
-          </PageTransition>
+          <ToastrProvider>
+            <GlobalStyle />
+            <Header />
+            <ToastrComponent />
+            <PageTransition route={router.route}>
+              <Component {...pageProps} />
+            </PageTransition>
+          </ToastrProvider>
         </AlertProvider>
       </CustomThemeProvider>
     </>

@@ -4,6 +4,7 @@ import Container from '../../layout/Container/Container.component';
 import { projects } from '../../data/projects';
 import ProjectDetailComponent from '../../components/ProjectDetail/ProjectDetail.component';
 import Seo from '../../layout/Seo/Seo';
+import NotFoundComponent from '../../components/NotFound/NotFound.component';
 
 const ProjectId = () => {
   const [projectData, setProjectData] = useState(null);
@@ -36,7 +37,9 @@ const ProjectId = () => {
           <ProjectDetailComponent project={projectData} />
         </>
       ) : (
-        ''
+        <>
+          <NotFoundComponent />
+        </>
       )}
     </Container>
   );

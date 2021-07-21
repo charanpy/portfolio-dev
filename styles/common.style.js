@@ -1,4 +1,4 @@
-import { css } from 'styled-components';
+import styled, { css } from 'styled-components';
 
 export const flex = css`
   display: flex;
@@ -31,4 +31,14 @@ export const box = css`
 
 export const Highlight = css`
   color: ${(props) => props.theme.secondary};
+`;
+
+export const CenterContainer = styled.div`
+  min-height: 90vh;
+  ${flexColumn};
+  ${flexCenter};
+`;
+
+export const ButtonContainer = styled.div`
+  margin-right: 1rem;
 `;

@@ -16,7 +16,7 @@ export const navData = [
   },
   {
     name: 'Blog',
-    path: '/',
+    path: '/blog',
     custom: true,
   },
   {

@@ -9,7 +9,6 @@ import { Skill, SkillContainer, SkillWrapper } from './Skill.style';
 
 const SkillComponent = () => {
   const { theme } = useContext(ThemeContext);
-  console.log(theme);
   const color = theme ? '#64ffda' : '#4070F4';
   return (
     <ScrollAnimation>

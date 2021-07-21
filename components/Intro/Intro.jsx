@@ -12,7 +12,6 @@ import {
 } from './Intro.style';
 
 const Intro = () => {
-  console.log('Intro');
   return (
     <IntroContainer id='#'>
       <IntroWrapper>

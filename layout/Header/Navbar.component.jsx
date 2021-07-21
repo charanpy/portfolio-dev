@@ -28,7 +28,7 @@ const Navbar = () => {
           <CloseComponent />
         )}
       </MenuContainer>
-      <MobileNavComponent isOpen={navbar} />
+      <MobileNavComponent isOpen={navbar} toggleNavbar={toggleNavbar} />
     </>
   );
 };

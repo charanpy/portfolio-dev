@@ -5,7 +5,7 @@ import ThemeComponent from '../../components/Theme/Theme.component';
 import NavLink from './NavLink.component';
 import { navData } from './helper';
 
-const SharedLinkComponent = ({ mobile = false }) => {
+const SharedLinkComponent = ({ mobile = false, toggleNavbar }) => {
   const { path: activePath, setPathName } = useContext(NavigationContext);
   const router = useRouter();
   const navigate = (path) => {
@@ -13,6 +13,7 @@ const SharedLinkComponent = ({ mobile = false }) => {
       window.scrollTo(0, 0);
     }
     setPathName(path);
+    if (mobile) toggleNavbar();
   };
   return (
     <>

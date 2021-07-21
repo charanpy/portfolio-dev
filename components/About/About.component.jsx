@@ -13,7 +13,6 @@ import SkillContainerComponent from './SkillContainer.component';
 import { skills } from './helper';
 
 const AboutComponent = () => {
-  console.log('About');
   return (
     <section id='about'>
       <ScrollAnimation>

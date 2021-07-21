@@ -7,9 +7,10 @@ const submitContactData = async (data) => {
         'Content-Type': 'application/json',
       },
     });
-    console.log(await res.json());
+    const response = await res.json();
+    return [response.success, response.message];
   } catch (error) {
-    console.log(error);
+    return [false, 'Something went wrong'];
   }
 };
 
