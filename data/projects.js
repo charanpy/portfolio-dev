@@ -1,12 +1,3 @@
-//backend-1
-// frontend-2
-// react-3
-// angular-4
-// reactnative-5
-// html/css-6
-// nextjs-7
-// firebase-8
-
 export const projects = {
   whatsapp238: {
     key: 'whatsapp238',
@@ -23,7 +14,7 @@ export const projects = {
       'Update Profile',
     ],
     image:
-      'https://static.wixstatic.com/media/1f823f_befaea26f18248b9aa05a783624a996e~mv2.png',
+      'https://static.wixstatic.com/media/1f823f_711138e546ab40b59a0110d46dcec7bf~mv2.png',
     website: 'https://w-clone-f3cce.web.app/',
     github: 'https://github.com/charanpy/Whatsapp-clone/',
   },
@@ -35,7 +26,7 @@ export const projects = {
     technology: 'React Firebase Typescript Context-Api',
     features: ['Firebase Authentication', 'Add Task', 'Delete Task'],
     image:
-      'https://static.wixstatic.com/media/1f823f_95b002bca33244358e50d42c2c5eee57~mv2.png',
+      'https://static.wixstatic.com/media/1f823f_de7f1aa7bf1945059399df62b5e0df12~mv2.png',
     website: 'https://todoapp-f1b9e.web.app/',
     github: 'https://github.com/charanpy/Firebase-TaskManager',
   },
@@ -47,7 +38,7 @@ export const projects = {
     technology: 'Angular',
     features: ['Implemented Tic Tac Toe Rule'],
     image:
-      'https://static.wixstatic.com/media/1f823f_eaf9353b531641818077237d71b0f435~mv2.png',
+      'https://static.wixstatic.com/media/1f823f_af7f6a2ce4374cc799c449beb4d87830~mv2.png',
     website: 'https://tic-tac-toe-angular-beginner.netlify.app/',
     github: 'https://github.com/charanpy/tic-tac-toe-angular',
   },
@@ -56,7 +47,7 @@ export const projects = {
     title: 'Portfolio',
     description: null,
     image:
-      'https://static.wixstatic.com/media/1f823f_cf801b9f864641ae93d92d205e6ba140~mv2.png',
+      'https://static.wixstatic.com/media/1f823f_366592b2779d4bf488fddca121e9540e~mv2.png',
     website: 'https://charanpy-portfolio.netlify.app/',
     github: 'https://github.com/charanpy/portfolio',
   },
@@ -65,7 +56,7 @@ export const projects = {
     title: 'Tindog',
     description: null,
     image:
-      'https://static.wixstatic.com/media/1f823f_97cdf4de755d4a2ea81215c4341cbdbb~mv2.png',
+      'https://static.wixstatic.com/media/1f823f_3bc5b92a70294f018e1c1d1e50d1bbc8~mv2.png',
     website: 'https://charanpy-bootstrap.netlify.app/',
     github: 'https://github.com/charanpy/bootstrap',
   },
@@ -74,7 +65,7 @@ export const projects = {
     title: 'Appx',
     description: null,
     image:
-      'https://static.wixstatic.com/media/1f823f_c36a0b05782842a0ad2406fe0b1e5340~mv2.png',
+      'https://static.wixstatic.com/media/1f823f_fdc863e16be74c86a71cac3f8268b457~mv2.png',
     website: 'https://appxfront-end.netlify.app/',
     github: 'https://github.com/charanpy/AppxStartup',
   },
@@ -86,7 +77,7 @@ export const projects = {
     technology: 'React',
     features: ['Add todo', 'Edit todo', 'View todo', 'Delete todo'],
     image:
-      'https://static.wixstatic.com/media/1f823f_35d44efde8084735a7d132d2c572834f~mv2.png',
+      'https://static.wixstatic.com/media/1f823f_fdc863e16be74c86a71cac3f8268b457~mv2.png',
     website: 'https://charanpy-todolistv1.netlify.app/',
     github: 'https://github.com/charanpy/react-todolistv1',
   },
@@ -98,7 +89,7 @@ export const projects = {
     technology: 'React',
     features: ['View Tours', 'Delete Tours'],
     image:
-      'https://static.wixstatic.com/media/1f823f_a7b1efa1e6794e08be96e02095402acb~mv2.png',
+      'https://static.wixstatic.com/media/1f823f_fe5fae6865d6480e92744f1848ce1882~mv2.png',
     website: 'https://charanpy-react-basics-city-tours.netlify.app/',
   },
   chat1: {
@@ -113,7 +104,7 @@ export const projects = {
       'Realtime Chat',
     ],
     image:
-      'https://static.wixstatic.com/media/1f823f_5bfce099808f44e4bde557b59fb74715~mv2.png',
+      'https://static.wixstatic.com/media/1f823f_30bc4b20d27b457f9fc823fd96f137dd~mv2.png',
     website: 'https://polar-mesa-14456.herokuapp.com/',
     github: 'https://github.com/charanpy/chatappV-1',
   },
@@ -122,7 +113,7 @@ export const projects = {
     title: 'Natuors',
     description: null,
     image:
-      'https://static.wixstatic.com/media/1f823f_821e1c6b6cca46409d7354dd443bc775~mv2.png',
+      'https://static.wixstatic.com/media/1f823f_0166f4a3779a416cac8047b60d20e96e~mv2.png',
     website: 'https://natuors.netlify.app/',
     github: 'https://natuors.netlify.app/',
   },
@@ -131,7 +122,7 @@ export const projects = {
     title: 'Nexter',
     description: null,
     image:
-      'https://static.wixstatic.com/media/1f823f_5c3f7d9db8b04822b23a5125dc22f0c9~mv2.png',
+      'https://static.wixstatic.com/media/1f823f_94fe7e62b02b45b1ac51ed6105b1d4d8~mv2.png',
     website: 'https://nexter-hc.netlify.app/',
     github: 'https://nexter-hc.netlify.app/',
   },
@@ -143,7 +134,7 @@ export const projects = {
     technology: 'Angular',
     features: ['Add todo', 'View todo', 'Delete Todo'],
     image:
-      'https://static.wixstatic.com/media/1f823f_34866debdb534bf9a29ba628547515f2~mv2.png',
+      'https://static.wixstatic.com/media/1f823f_c799f3be515e432e8e7c5f6018cddc76~mv2.png',
     website: 'https://github-hsxrer.stackblitz.io/',
     github: 'https://github.com/charanpy/angular-todo',
   },
@@ -154,7 +145,7 @@ export const projects = {
     technology: 'Nodejs Express OpenWeather-API EJS',
     feautures: ['404 page for invalid city', 'Display weather of city'],
     image:
-      'https://static.wixstatic.com/media/1f823f_29e2856d6ef24323b2614f4047a2f956~mv2.png',
+      'https://static.wixstatic.com/media/1f823f_e9915e579b094ca68b9c558d9ad40708~mv2.png',
     website: 'https://weather-app-nodejs-express-ejs.herokuapp.com/',
     github: 'https://github.com/charanpy/weatherapp',
   },
@@ -166,7 +157,7 @@ export const projects = {
     technology: 'Nodejs Express Mongodb EJS Bootstrap',
     feautures: ['Create blog', 'Delete blog', 'List blog'],
     image:
-      'https://static.wixstatic.com/media/1f823f_762b465dd5994e3aaacb220e5629ca9a~mv2.png',
+      'https://static.wixstatic.com/media/1f823f_cd7b7851759247a2aee46534c3856a11~mv2.png',
     website: 'https://blogexpejs.herokuapp.com/',
     github: 'https://github.com/charanpy/blog',
   },
@@ -184,7 +175,7 @@ export const projects = {
       'Delete Post',
     ],
     image:
-      'https://static.wixstatic.com/media/1f823f_d15224c2a1e54f19ae8d501215d9f616~mv2.png',
+      'https://static.wixstatic.com/media/1f823f_9c20d9ffb6444604b73e094c0f4525dc~mv2.png',
     website: 'https://youthful-agnesi-f432f1.netlify.app/',
     github: 'https://github.com/charanpy/DevConnector-V1',
   },
@@ -195,7 +186,7 @@ export const projects = {
     technology: 'Nodejs Expressjs Passportjs JWT nodemailer Mongodb',
     features: ['Email Verification', 'Encrtpted Password', 'Google Signin'],
     image:
-      'https://static.wixstatic.com/media/1f823f_7c2e200a794043cd835f04c0381d6364~mv2.png',
+      'https://static.wixstatic.com/media/1f823f_f6d2d53eef1a4c049dca90db28bf3740~mv2.png',
     website: null,
     github: 'https://github.com/charanpy/Mernauth',
   },
@@ -214,7 +205,7 @@ export const projects = {
       'List categories in store',
     ],
     image:
-      'https://static.wixstatic.com/media/1f823f_9a581bd04893473fbc91bb8b507457b3~mv2.png',
+      'https://static.wixstatic.com/media/1f823f_b2aeb95f6ad844c388203cfdb1b6609b~mv2.png',
     website: 'https://shop-car-d-t.herokuapp.com/',
     github: 'https://github.com/charanpy/shopCart',
   },
@@ -233,7 +224,7 @@ export const projects = {
       'Update Profile',
     ],
     image:
-      'https://static.wixstatic.com/media/1f823f_728ce597935948d9a265b492ba8abffc~mv2.png',
+      'https://static.wixstatic.com/media/1f823f_b96eb44b6dfe4735b3d1e8ff4b2ddb5b~mv2.png',
     website: 'https://blog-angular-ea934.web.app/',
     github: 'https://github.com/charanpy/tweet-angular',
   },
@@ -255,7 +246,7 @@ export const projects = {
       'Update Profile',
     ],
     image:
-      'https://static.wixstatic.com/media/1f823f_e88f1324756c428b86099d910342ef97~mv2.png',
+      'https://static.wixstatic.com/media/1f823f_590555face544b9da8f88c589df5d48d~mv2.png',
     website: 'https://charanpy-insta-clone.netlify.app/',
     github: 'https://github.com/charanpy/Instagram-react',
   },
@@ -273,7 +264,7 @@ export const projects = {
       'Payment',
     ],
     image:
-      'https://static.wixstatic.com/media/1f823f_6c1ad27e0de84a238966b6563a56fb92~mv2.png',
+      'https://static.wixstatic.com/media/1f823f_bba71015f626411b81b2092fcc374d02~mv2.png',
     website: null,
     github: 'https://github.com/charanpy/shopify',
   },
