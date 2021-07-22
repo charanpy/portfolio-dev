@@ -11,7 +11,7 @@ const HeaderComponent = () => {
       <Header>
         <HeaderNameContainer>
           <LinkComponent path='/'>
-            <div>
+            <div className='cursor'>
               <Image
                 src='/logo.png'
                 alt='Logo'

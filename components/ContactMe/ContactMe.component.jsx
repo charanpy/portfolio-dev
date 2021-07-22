@@ -9,7 +9,7 @@ import {
   TextArea,
   UserDetail,
 } from './ContactMe.style';
-import submitContactData from './contactService';
+import submitContactData, { checkWindow, contactLimit } from './contactService';
 import { ToastrContext } from '../../providers/ToastrProvider';
 
 const ContactMeComponent = () => {
@@ -18,6 +18,12 @@ const ContactMeComponent = () => {
   const nameRef = useRef(null);
   const messageRef = useRef(null);
 
+  const clearInput = () => {
+    emailRef.current.value = '';
+    nameRef.current.value = '';
+    messageRef.current.value = '';
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     const email = emailRef?.current?.value;
@@ -25,6 +31,11 @@ const ContactMeComponent = () => {
     const message = messageRef?.current.value;
     const [isValid] = contactFormValidation(email, name, message);
     if (!isValid) return;
+    const count = checkWindow(contactLimit);
+    if (count && count >= 1) {
+      openAlert({ variant: 'success', title: 'Sent successfully' });
+      return;
+    }
     const [success, response] = await submitContactData({
       email,
       name,
@@ -34,6 +45,7 @@ const ContactMeComponent = () => {
       variant: success ? 'success' : 'error',
       title: response,
     });
+    clearInput();
   };
   return (
     <ContactMeContainer>

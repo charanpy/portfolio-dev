@@ -16,7 +16,6 @@ const ProjectId = () => {
       return;
     }
     const projectData = projects[id];
-    console.log(projectData);
     if (!projectData) {
       setProjectData(null);
       return;

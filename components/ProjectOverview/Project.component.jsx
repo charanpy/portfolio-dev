@@ -21,7 +21,6 @@ const ProjectComponent = ({
   about,
 }) => {
   const navigate = () => {
-    console.log();
     if (window.innerWidth >= 790) {
       window.open(link, '_blank');
     }
@@ -46,11 +45,7 @@ const ProjectComponent = ({
         {description && about ? (
           <LinkComponent path={`/projects/${path}`}>
             <ButtonContainer>
-              <Button
-                onClick={() => console.log('hi')}
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.95 }}
-              >
+              <Button whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }}>
                 More...
               </Button>
             </ButtonContainer>

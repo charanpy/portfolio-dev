@@ -31,7 +31,6 @@ const ToastrProvider = ({ children }) => {
   }, [open, closeAlert]);
   const openAlert = ({ open = true, variant = 'error', title }) => {
     const alert = { open, variant, title };
-    console.log(alert);
     setAlert((prevState) => ({
       ...prevState,
       ...alert,
