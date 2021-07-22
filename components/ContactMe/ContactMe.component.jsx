@@ -34,6 +34,7 @@ const ContactMeComponent = () => {
     const count = checkWindow(contactLimit);
     if (count && count >= 1) {
       openAlert({ variant: 'success', title: 'Sent successfully' });
+      clearInput();
       return;
     }
     const [success, response] = await submitContactData({
