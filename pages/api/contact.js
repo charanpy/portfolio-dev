@@ -28,7 +28,7 @@ const contactMe = async (req, res) => {
     process.env.EMAIL_TO
   );
   return res.status(statusCode).json({
-    success: true,
+    success: statusCode === 200,
     message: nodemailerResult,
   });
 };
