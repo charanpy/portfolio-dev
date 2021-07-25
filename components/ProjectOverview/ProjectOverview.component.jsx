@@ -4,7 +4,7 @@ import ButtonComponent from '../Button/Button.component';
 import ScrollAnimation from '../ScrollAnimation/ScrollAnimation.component';
 import { projects } from './helper';
 import ProjectComponent from './Project.component';
-import { ProjectButton, ProjectContainer } from './ProjectOverview.style';
+import { ProjectButton } from './ProjectOverview.style';
 import LinkComponent from '../Link/Link.component';
 import { featuredProject } from '../../data/projects';
 import ProjectContainerComponent from './ProjectContainer.component';

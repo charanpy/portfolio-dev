@@ -70,6 +70,7 @@ export const MobileNavWrapper = styled.ul`
   top: 30%;
   left: 40%;
   bottom: 40%;
+  margin-bottom: 1rem;
 `;
 
 export const MenuContainer = styled.div`

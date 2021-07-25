@@ -8,14 +8,14 @@ export const light = {
   slate: '#212529',
   lighter: 'rgba(0,0,0,0.7)',
   nav: '#4070F4',
-  // secondary: '#4070F4',
   secondary: '#0275d8',
   secondaryHover: '#2C98FF',
   boxShadow: 'rgba(0,0,0, 0.7)',
+  blogText: '#374151',
+  blogBox: '#f4f7f6',
 };
 
 export const dark = {
-  // background: '#0D1117',
   background: '#0A192F',
   color: '#fff',
   textLight: '#CCD6F6',
@@ -28,4 +28,6 @@ export const dark = {
   secondary: '#64ffda',
   secondaryHover: 'rgba(100, 255, 218, 0.1)',
   boxShadow: 'rgba(2,12,27,0.7)',
+  blogText: '#d1d5db',
+  blogBox: 'rgba(2, 12, 27, 0.7)',
 };

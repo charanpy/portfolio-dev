@@ -16,7 +16,12 @@ const CustomThemeProvider = ({ children }) => {
   React.useEffect(() => {
     setMounted(true);
   }, []);
-  const toggleTheme = () => {
+  const toggleTheme = (click = false) => {
+    if (click)
+      localStorage.setItem(
+        'portfolio-theme',
+        JSON.stringify({ theme: !customTheme.value })
+      );
     customTheme.toggle();
     console.log('theme', customTheme);
   };

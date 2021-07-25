@@ -8,7 +8,7 @@ import MoonComponent from '../svg/Moon/Moon.component';
 const ThemeComponent = ({ mobile }) => {
   const { theme, toggleTheme } = useContext(ThemeContext);
   return (
-    <NavLink visible navigate={toggleTheme} anchor={false}>
+    <NavLink visible navigate={() => toggleTheme(true)} anchor={false}>
       <ArrowContainer>
         <Arrow>
           {theme ? <>&#9728;</> : <MoonComponent />} {mobile ? 'Theme' : ''}

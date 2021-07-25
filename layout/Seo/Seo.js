@@ -9,9 +9,10 @@ const Seo = ({
 }) => {
   return (
     <Head>
-      <meta charset='utf-8' />
+      <meta charSet='utf-8' />
       <meta name='viewport' content='width=device-width, initial-scale=1.0' />
       <title>{title}</title>
+      <meta name='robots' content='index, follow' />
       <link rel='icon' href='/logo.png' />
       <meta name='author' content='Charan' />
       <meta name='description' content={description} />

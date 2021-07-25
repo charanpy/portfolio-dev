@@ -51,3 +51,14 @@ img {
 img:hover {
   transform: scale(1.2);
 }
+
+.remark-highlight {
+  width:100%;
+  margin: 1rem 0;
+}
+
+@media(max-width:790px) {
+  .published {
+    display: none !important;
+  }
+}
