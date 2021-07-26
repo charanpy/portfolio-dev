@@ -10,7 +10,7 @@ export const light = {
   nav: '#4070F4',
   secondary: '#0275d8',
   secondaryHover: '#2C98FF',
-  boxShadow: 'rgba(0,0,0, 0.7)',
+  boxShadow: 'rgba(0,0,0, 0.2)',
   blogText: '#374151',
   blogBox: '#f4f7f6',
 };

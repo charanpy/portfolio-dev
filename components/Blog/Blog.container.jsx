@@ -1,8 +1,9 @@
 import React from 'react';
-import ProjectComponent from '../ProjectOverview/Project.component';
 import {
   BlogCont,
+  BlogMetaInfo,
   BlogPublished,
+  BlogTime,
   BlogTitle,
   BlogWrapper,
   Highlight,
@@ -12,11 +13,16 @@ const BlogContainer = ({ meta, children }) => {
   return (
     <BlogCont>
       <BlogWrapper>
-        <BlogTitle>{meta.title}</BlogTitle>
-        <BlogPublished>
-          ARTICLE BY <Highlight>CHARAN</Highlight>- {meta.published}
-        </BlogPublished>
-        <ProjectComponent src={meta.image} />
+        <div style={{ width: 'fit-content' }}>
+          <BlogTitle>{meta.title}</BlogTitle>
+          <BlogMetaInfo>
+            <BlogPublished>
+              BY <Highlight>CHARAN</Highlight>- {meta.published}
+            </BlogPublished>
+            <BlogTime>{meta.readingTime} min read</BlogTime>
+          </BlogMetaInfo>
+        </div>
+
         {children}
       </BlogWrapper>
     </BlogCont>

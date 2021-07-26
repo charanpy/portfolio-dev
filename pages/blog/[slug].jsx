@@ -1,9 +1,10 @@
+import Head from 'next/head';
 import { MDXRemote } from 'next-mdx-remote';
+import Seo from '../../layout/Seo/Seo'
 import Container from '../../layout/Container/Container.component';
 import MDXComponents from '../../components/MdxComponents/Mdx.components';
 import { getFiles, getFileBySlug } from '../../lib/MdxBlog';
 import BlogContainer from '../../components/Blog/Blog.container';
-import Head from 'next/head';
 
 export default function Blog({ mdxSource, frontMatter }) {
   return (
@@ -14,6 +15,7 @@ export default function Blog({ mdxSource, frontMatter }) {
           href='https://unpkg.com/dracula-prism/dist/css/dracula-prism.css'
         ></link>
       </Head>
+      <Seo title={frontMatter.title} description={frontMatter.summary} ogTitle={`${frontMatter.summary}- Charan`} />
       <Container>
         <BlogContainer meta={frontMatter}>
           <MDXRemote {...mdxSource} components={MDXComponents} />
@@ -36,7 +38,6 @@ export const getStaticPaths = async () => {
 };
 
 export async function getStaticProps({ params }) {
-  console.log(params);
   const post = await getFileBySlug('blog', params.slug);
   return { props: post };
 }

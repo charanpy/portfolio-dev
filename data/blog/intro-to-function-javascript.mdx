@@ -2,7 +2,272 @@
 title: A Brief Intro to Functions-Javascript
 name: charan
 published: July 25
-image: https://i.ibb.co/XCzrsVW/js-func.webp
 category: javascript
 summary: Learn syntax of function and different way of implementing function in js with examples
 ---
+
+
+The most beautiful thing in JavaScript is Functions.Functions are heart and soul of JS and it is the most powerful part in JS.  
+  
+
+# What is a function?
+
+A function is a set of statements that takes input,do some tasks and returns result.The main purpose of function is code reusability.  
+
+There are many ways to create function in JS.While I am learning JS ,I got frustrated on seeing different syntax for declaring a function.But at the end,each syntax has its own functionality which adds flexibility to JS.  
+
+
+# Table of Contents
+
+
+1. [Function Statement](#function-statement)
+2. [Function Expression](#function-expression)
+3. [Arrow Function](#arrow-function)
+4. [Anonymous Function](#anonymous-function)
+5. [Function Constructor](#function-constructor)
+6. [IIFE](#iife)
+7. [Callback Function](#callback-function)
+8. [Higher Order Function](#higher-order-function)
+
+# Function Statement
+Other name: Function declaration.
+
+*Syntax:*
+
+```js
+function functionName(param1,param2,...) {
+  // body of function
+}
+```
+
+Here **param** refers to Parameters.<Highlight>Parameters</Highlight> are data that are passed to function which can be used to perform task inside it(function).They are passed within parenthesis after function name seperated by commas.Parameters are defined at time of Function declaration.
+
+After declaring function next step is to ***call the function***.
+
+```js
+functionName(value1,value2,...)
+```
+
+The values that are passed within parenthesis after function name are called <Highlight>Arguments</Highlight>.When a function is called, the values that are passed during the call are called as arguments.
+
+```js
+function square(value){
+  return value*value
+}
+const res = square(2);
+console.log(res)
+```
+
+The above code executes the square of number.when javascript reaches return statement,function will stop executing.The return statement returns value back to caller .A function without return statement leads to ***undefined***.
+
+
+In above code return statement stop executing and returns value i.e 4 back to place where function is called and we catch returned value to a variable res.
+
+# Function Expression
+
+Function expression can be stored in a variable and later can be called anywhere in the program.
+
+```js
+const square = function(value){
+  return value*value
+}
+const res = square(2);
+```
+
+In above syntax when we look through function syntax,we are storing function without declaring function name.This is called anonymous function(A function which does not have name).
+
+We can also add a name to function but while calling we should use variable that stores function not function name.
+This is called as ***named function expression***.
+
+```js
+const square = function x(value){
+  return value*value
+}
+const res = square(2);
+x(2) //Reference error
+```
+
+# Arrow Function
+When I look at its syntax for first time,it looks weird
+```js
+const square = (value) => {
+  return value*value
+}
+```
+Arrow function must have a <Highlight>return</Highlight> statement.If we have only one statement inside function we can use shorthand syntax.
+
+```js
+const square = (value) => value*value
+```
+If the function has only one statement, and the statement returns a value, then we can remove the brackets and the return keyword.
+
+
+How these syntax for creating function differs ?
+
+- *Hoisting*
+
+- *this keyword*
+
+Functions are so flexible.Functions are nothing but an object(Function object).So we can also add **methods** to function.
+
+```js
+function square(value){
+  return value*value
+}
+square.formula = 'side * side';
+console.log(square.formula)
+// side*side
+```
+
+# Anonymous Function
+A function which does not have name.
+```js
+const square = function(side) {
+  return side * side;
+}
+```
+In this example, the anonymous function has no name between the function keyword and parentheses ().
+
+
+# Function Constructor
+When we log square
+```js
+console.log(square);
+{[Function square] formula:'side*side'}
+```
+
+As I mentioned Function is nothing but an Function object.We can create function using Function constructor which is not the recommended way.
+
+*SYNTAX:*
+
+new Function (arg1, arg2, ... argN, functionBody)
+
+```js
+const square = new Function('side','return side * side');
+square(2)
+```
+
+# IIFE
+It is a function that runs as soon as it is defined.
+
+
+Other Name
+-**Self Executing Anonymous Function**
+-**Self executing- No need to call function**
+
+Anonymous function-does not have a function name
+It consists of two parts:
+
+
+First part is <Highlight>anonymous function enclosed within Parenthesis.</Highlight>
+
+
+Second part created <Highlight>immediately invoked function expression ()</Highlight>.
+
+***Syntax***
+```js
+(function(){
+  statements;
+})
+```
+```js
+const favProgLang = (function() {
+  const name = 'javascript';
+  return name;
+})();
+```
+
+IIFE provides **data security/privacy**.It cannot be accessed and manipulated in global scopes.
+
+# Callback Function
+A callback is a function that is to be executed after another function has finished executing.Any function that is passed as an argument is called a callback function.
+
+```js
+const printFavLang = (name) => {
+  console.log(name)
+}
+const getFavLang = (callback) => {
+  const language = 'Javascript';
+  printFavLang(language);
+}
+getFavLang(printFavLang);
+```
+
+Functions are higher order objects/higher order citizens.
+
+
+- 1.Functions are treated as values.
+- 2.Functions can be passed as parameter in another function.
+- 3.A Function can return another function.
+- 4.A Function is another type of object
+
+
+
+Functions are treated as values
+
+```js
+const square = (value) => {
+  return value * value;
+}
+
+const res = square(2);
+```
+
+Function can be passed as parameter in another function
+
+```js
+const printFavLang = (name) => {
+  console.log(name)
+}
+const getFavLang = (callback) => {
+  const language = 'Javascript';
+  printFavLang(language);
+}
+getFavLang(printFavLang);
+```
+
+Function can return another Function.
+
+```js
+const square = (side) => {
+  const squaredNumber = side * side;
+  return () => squaredNumber;
+}
+
+const callOuterFunction = square(2);
+const callInnerFunction = callOuterFunction();
+```
+
+There is a short way of *calling inner function.*
+
+Function can return another function
+
+```js
+const square = (side) => {
+  const squaredNumber = side * side;
+  return () => squaredNumber;
+}
+
+const callOuterFunction = square(2)();
+```
+
+square(2)()-square(2) returns inner function to which we are adding () to call inner function.
+
+# Higher Order Function
+
+A function that accepts functions and/or return another function.
+
+For example, the map function on arrays is a higher order function. The map function takes a function as an argument.
+
+```js
+[1, 2, 3, 4].map(function(n){
+    return n * 2
+})
+```
+Refer above code for more example.
+
+# Quick Tips:
+
+- Modularize-One function per task.
+- Use function name which defines it’s task.
+- Avoid nested functions.

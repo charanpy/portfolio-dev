@@ -1,5 +1,4 @@
-import HighlightComponent from '../Highlight/Highlight.component';
-import { Anchor, Code, Heading1, Paragraph, Pre } from './MdxStyle';
+import { Anchor, Code, Heading1, Highlight, Hr, List, Paragraph, Pre } from './MdxStyle';
 
 const MDXComponents = {
   h1: Heading1,
@@ -7,7 +6,9 @@ const MDXComponents = {
   pre: Pre,
   code: Code,
   a: Anchor,
-  Highlight: HighlightComponent,
+  Highlight: Highlight,
+  hr: Hr,
+  li: List
 };
 
 export default MDXComponents;

@@ -57,8 +57,3 @@ img:hover {
   margin: 1rem 0;
 }
 
-@media(max-width:790px) {
-  .published {
-    display: none !important;
-  }
-}
