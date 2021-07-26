@@ -23,7 +23,18 @@ export const Paragraph = styled.p`
 
 export const List = styled.li`
   ${SharedText};
-`
+  position: relative;
+  &::before {
+    content: '';
+    position: absolute;
+    left: -5%;
+    height: 0.5rem;
+    top: 45%;
+    width: 0.5rem;
+    border-radius: 50%;
+    background: ${props => props.theme.light};
+  }
+`;
 export const Pre = styled.pre`
   min-width: 10rem;
   height: auto;

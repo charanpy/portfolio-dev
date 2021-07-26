@@ -8,6 +8,7 @@ import '../styles/globals.css';
 import PageTransition from '../layout/PageTransition/PageTransition.component';
 import ToastrComponent from '../components/Toastr/Toastr.component';
 import ToastrProvider from '../providers/ToastrProvider';
+import CollabrateComponent from '../components/Collobrate/Collobrate.component';
 
 function MyApp({ Component, pageProps, router }) {
   return (
@@ -25,6 +26,7 @@ function MyApp({ Component, pageProps, router }) {
             <PageTransition route={router.route}>
               <Component {...pageProps} />
             </PageTransition>
+            <CollabrateComponent />
           </ToastrProvider>
         </AlertProvider>
       </CustomThemeProvider>

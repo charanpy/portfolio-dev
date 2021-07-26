@@ -5,3 +5,102 @@ published: July 25
 category: javascript
 summary: Deep dive in to this keyword and its implementation with different context with examples
 ---
+
+***this*** is an important topic for JavaScript developers. So what is this😅??
+
+this is a special keyword that is created for every <Highlight>execution context</Highlight>.I will cover execution context,call stack,memory heap in my future posts.
+
+
+this is not static i.e it changes depending upon the place where it is used.In most cases,value of this is determined by how function is called.
+
+# Table of Contents
+1. [Global Context](#global-context)
+2. [Inside Method](#inside-method)
+3. [Simple Function Call](#simple-function-call)
+4. [Event Listener](#event-listener)
+5. [Arrow Function](#arrow-function)
+6. [Quick Notes](#quick-notes)
+
+# Global context
+
+In the global execution context i.e outside of any function this refers to global object which is window in case of browsers.
+
+```js
+console.log(this) //Window
+this === window //true
+```
+
+# Inside Method
+
+In a method, this keyword refers to the object it belongs to ,which means using this keyword we can able to ***access its properties*** inside an object.
+
+```js
+const profile = {
+    name: 'charan',
+    favLang: 'js',
+    printUser: function(){
+        console.log(`${this.name} ${this.favLang}`);
+    }
+}
+profile.printUser();  // charan js
+```
+
+# Simple Function Call
+
+this in a function refers to <Highlight>global object Window</Highlight> but in strict mode this keyword refers to <Highlight>undefined</Highlight>.
+
+
+Strict mode: In order to use strict mode we use an expression: *“use strict”*.It helps to write cleaner code,like preventing from using undeclared variable.
+
+```js
+function testThis(){
+    console.log(this);
+}
+testThis()   // Window
+
+“use strict"
+function testThis(){
+    console.log(this);
+}
+// undefined
+```
+
+# Event Listener
+
+Here this refers to DOM element that handler is attached to.In simple words it refers to HTML element that received the event.
+
+# Arrow Function
+
+Arrow function doesn’t get its own this.It uses *lexical* i.e it uses parent scope of this.
+
+```js
+const ex=()=>{
+    console.log(this);
+}
+
+ex(); //Window
+// refers to parent this
+
+const profile={
+    name:'ch',
+    print:function(){
+        const fav='js'
+        return ()=>{
+            console.log(this,this.fav);
+        }
+    }
+}
+profile.print()();
+
+//{
+name: "ch",
+print:f()
+},js
+```
+
+# Quick Notes
+1. Method-this refers to object in which method is called
+2. Simple function call -Window Strict mode-undefined
+3. Event Listener-DOM element in which handler is attached to
+4. Arrow function-does not get its own this.It uses lexical(parent scope of this)
+5. Global context- Window object

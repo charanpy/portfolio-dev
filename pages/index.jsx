@@ -6,7 +6,6 @@ import ClipboardComponent from '../components/Clipboard/Clipboard.component';
 import AboutComponent from '../components/About/About.component';
 import SkillComponent from '../components/Skills/Skills.component';
 import ProjectOverviewComponent from '../components/ProjectOverview/ProjectOverview.component';
-import CollabrateComponent from '../components/Collobrate/Collobrate.component';
 import Seo from '../layout/Seo/Seo';
 
 const Home = () => {
@@ -20,7 +19,6 @@ const Home = () => {
         <SkillComponent />
         <AboutComponent />
         <ProjectOverviewComponent />
-        <CollabrateComponent />
       </Container>
     </>
   );
