@@ -1,0 +1,190 @@
+---
+title: List All Images Of Selected Album - React Native
+name: charan
+published: July 25
+category: React Native
+summary: List all images of selected album using expo-media-library,request permission for accessing album.
+---
+
+
+Expo is a powerful environment for React Native which helps you from creation to distribution of your React Native apps.
+
+What is the main purpose of this article?
+
+
+There are many article which is focused on how to take picture and store it.While I am doing a project,I had a problem in displaying a list of photos in an album.I searched solution for it but unfortunately couldn’t find it.Then after reading and understanding documentation,finally I was able to solve it.Let’s start.
+
+**Prerequisites**:expo installed in your system,Basic knowledge of react and react native.
+
+# Table Of Contents
+1. [Installation](#installation)
+2. [Permission](#permission)
+3. [Permission Response](#permission-response)
+4. [Media Library](#media-library)
+5. [Display Local URI](#display-local-uri)
+
+
+# Installation
+
+```js
+expo init album
+expo install expo-media-library
+expo install expo-permissions
+```
+
+***expo init*** projectName to create new project.
+
+
+***expo-permissions*** to handle permissions.
+
+***expo-media-library*** provides access to the user’s media library, allowing them to access their existing images and videos from app, as well as save new ones.
+
+# Permission
+
+What are the permissions do we need?
+
+
+Ummm!Let’s ask our friend.Hey documentation what permissions do we need to ask to the users.
+
+<Highlight>Permissions.CAMERA_ROLL</Highlight>
+
+So we need Camera roll permission.
+
+```js
+import * as Permissions from 'expo-permissions';
+
+export const getCameraRollPermission = async () => {
+  const response = await Permissions.getAsync(
+    Permissions.CAMERA_ROLL
+  );
+  return response;
+};
+
+export const askCameraRollPermission = async () => {
+  const response = await Permissions.askAsync(
+    Permissions.CAMERA_ROLL
+  );
+  return response;
+};
+```
+
+Before Asking permission, we need to check whether user already granted permission.This can be checked using getAsync() method.
+
+If user didn't allow permission we request using askAsync() method.
+
+# Permission Response
+***So we are returning response. What does response contains?***.Response contains two possible output
+
+***When user <Highlight>cancels</Highlight> Permission***
+
+```js
+const response = {
+  "canAskAgain": false,
+  "expires": "never",
+  "granted": false,
+  "status": "denied"
+}
+```
+***When user <Highlight>accepts</Highlight> Permission***
+
+```js
+const response = {
+  "canAskAgain": false,
+  "expires": "never",
+  "granted": true,
+  "status": "granted"
+}
+```
+
+By using granted property in an object(returned),we can derive component logic.
+
+***Example***
+```js
+import { useState, useEffect } from 'react';
+
+const Media = () => {
+  const [loaded, setLoaded] = useState(false);
+
+  useEffect(() => {
+    const askRequiredPermissions = () => {
+      if (await (getCameraRollPermission.granted)) {
+        setLoaded(loaded => !loaded);
+        return;
+      }
+
+      const { granted } = await askCameraRollPermission();
+      if (granted) {
+        setLoaded(loaded => !loaded);
+        return;
+      }
+
+      // false logic handling
+    }
+
+    askRequiredPermissions();
+  },[])
+}
+
+```
+
+We are requesting permission for CAMERA_ROLL.Before requesting permissions we are checking whether user already allows permission using getAsync() method.If yes we are changing loaded to true so that we can display our component.If user didn’t allow permission we ask for permission using askAsync() method.If user allows we set loaded to true and display component otherwise we can navigate user to home screen.
+
+# Media Library
+
+```js
+
+// album detail of particular album
+// albumname Ex- Camera, Instagram, Whatsapp Images etc.
+const getAlbumDetail = async (albumName) => {
+  const getPhotos = await MediaLibrary.getAlbumAsync(albumName);
+  return getPhotos;
+};
+
+// photo uri
+const getAllPhotosInAlbum = async (getAlbums) => {
+  const getAllPhotos = await MediaLibrary.getAssetsAsync({
+    first: 20,
+    album: getAlbums,
+    sortBy: ['modificationTime'],
+    mediaType: ['photo', 'video'],
+  });
+  return getAllPhotos;
+};
+
+// album list
+const getAlbumList = async () => {
+  const getAlbum = await MediaLibrary.getAlbumsAsync();
+  return getAlbum;
+};
+```
+
+getAlbumAsync(name)
+
+name accepts string which represents album name.If an album present,it returns an object.This object contains ***details of album selected(id,title,folder name etc)***.If album is not present it returns null.
+
+getAssetAsync() 
+
+we have ***passed album details(results of getAlbumAsync() method) to album property***.This method returns list of item for the albums passed to it.There are further configuration we can pass to it like first,sort,media type.
+
+In order to list all albums from our device,we use ***getAlbumsAsync()*** to list user created albums.
+
+1. getAlbumsAsync()-<Highlight>list all albums</Highlight>
+2. getAlbumAsync(albumName)-<Highlight>list details of albumName</Highlight>
+3. getAssetsAsync(options)-<Highlight>Fetches a page of assets</Highlight>
+
+# Display Local URI
+
+```js
+import { Image } from 'react-native';
+
+<Image 
+  source={{ uri: localUri, isStatic: true}}
+  style={{ width: screenWidth, height: screenHeight}}
+/>
+
+```
+
+In order to display local images, we must add following properties
+
+1. isStatic:true
+2. Mention width and height
