@@ -40,6 +40,11 @@ export const AllBlog = styled.ul`
   margin: 5rem 0;
   ${flexColumn};
   align-items: center;
+  @media (max-width: 790px) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 `;
 
 export const BlogPageContainer = styled.main`
@@ -55,7 +60,8 @@ export const BlogList = styled.li`
   margin: 2rem;
 
   @media (max-width: 790px) {
-    width: 18rem;
+    min-width: 0;
+    width: 20rem;
     flex-direction: column;
   }
 `;
