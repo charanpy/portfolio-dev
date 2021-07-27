@@ -2,11 +2,11 @@ import IPData from 'ipdata';
 import contactFormValidation from '../../utils/contact-validation';
 import contactFormSubscribe from '../../utils/contactMe';
 
-const cacheConfig = {
+const cache = {
   max: 1000,
   maxAge: 10 * 60 * 1000,
 };
-const ipdata = new IPData(process.env.IP_TOKEN, cacheConfig);
+const ipdata = new IPData(process.env.IP_TOKEN, cache);
 
 const contactMe = async (req, res) => {
   if (req.method !== 'POST') return;
