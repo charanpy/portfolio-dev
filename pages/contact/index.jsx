@@ -3,7 +3,7 @@ import ContactMeComponent from '../../components/ContactMe/ContactMe.component';
 import Container from '../../layout/Container/Container.component';
 import Seo from '../../layout/Seo/Seo';
 
-const contact = () => {
+const Contact = () => {
   return (
     <>
       <Seo title='Contact' description='Contact me to collobrate or discuss' />
@@ -14,4 +14,4 @@ const contact = () => {
   );
 };
 
-export default contact;
+export default Contact;

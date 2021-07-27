@@ -9,7 +9,7 @@ import {
   Highlight,
 } from './Blog.style';
 
-const BlogContainer = ({ meta, children }) => {
+const BlogContainer = ({ meta, children, views }) => {
   return (
     <BlogCont>
       <BlogWrapper>
@@ -19,7 +19,10 @@ const BlogContainer = ({ meta, children }) => {
             <BlogPublished>
               BY <Highlight>CHARAN</Highlight>- {meta.published}
             </BlogPublished>
-            <BlogTime>{meta.readingTime} min read</BlogTime>
+            <BlogTime>
+              {meta.readingTime} min read - {views}{' '}
+              {views > 1 ? 'views' : 'view'}{' '}
+            </BlogTime>
           </BlogMetaInfo>
         </div>
 

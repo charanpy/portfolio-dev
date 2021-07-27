@@ -1,12 +1,14 @@
 import Head from 'next/head';
 import { MDXRemote } from 'next-mdx-remote';
-import Seo from '../../layout/Seo/Seo'
+import BlogViews from '../../lib/BlogViewService';
+import { getFiles, getFileBySlug } from '../../lib/MdxBlog';
+import Seo from '../../layout/Seo/Seo';
 import Container from '../../layout/Container/Container.component';
 import MDXComponents from '../../components/MdxComponents/Mdx.components';
-import { getFiles, getFileBySlug } from '../../lib/MdxBlog';
 import BlogContainer from '../../components/Blog/Blog.container';
 
 export default function Blog({ mdxSource, frontMatter }) {
+  const { data } = BlogViews(frontMatter.slug);
   return (
     <>
       <Head>
@@ -15,9 +17,13 @@ export default function Blog({ mdxSource, frontMatter }) {
           href='https://unpkg.com/dracula-prism/dist/css/dracula-prism.css'
         ></link>
       </Head>
-      <Seo title={frontMatter.title} description={frontMatter.summary} ogTitle={`${frontMatter.summary}- Charan`} />
+      <Seo
+        title={frontMatter.title}
+        description={frontMatter.summary}
+        ogTitle={`${frontMatter.summary}- Charan`}
+      />
       <Container>
-        <BlogContainer meta={frontMatter}>
+        <BlogContainer meta={frontMatter} views={data?.views || 1}>
           <MDXRemote {...mdxSource} components={MDXComponents} />
         </BlogContainer>
       </Container>
