@@ -1,5 +1,7 @@
 import React from 'react';
+import { useRouter } from 'next/router';
 import ButtonComponent from '../Button/Button.component';
+
 import {
   IntroContainer,
   IntroWrapper,
@@ -12,6 +14,8 @@ import {
 } from './Intro.style';
 
 const Intro = () => {
+  const router = useRouter();
+  const handleClick = () => router.push('/projects');
   return (
     <IntroContainer id='#'>
       <IntroWrapper>
@@ -39,7 +43,7 @@ const Intro = () => {
             delay: 2,
           }}
         >
-          <ButtonComponent>Resume</ButtonComponent>
+          <ButtonComponent handleClick={handleClick}>Projects</ButtonComponent>
         </AnimationContainer>
       </IntroWrapper>
     </IntroContainer>
