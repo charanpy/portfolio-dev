@@ -9,6 +9,7 @@ body {
   font-family: 'Alegreya',
   sans-serif;
   font-size: 62.5%;
+  background-color: '';
   scroll-behavior: smooth;
 }
 .pd{padding-bottom: 10rem;}
