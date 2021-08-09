@@ -21,9 +21,9 @@ function MyApp({ Component, pageProps, router }) {
         <meta name='viewport' content='width=device-width, initial-scale=1.0' />
       </Head>
       <CustomThemeProvider>
+        <GlobalStyle />
         <AlertProvider>
           <ToastrProvider>
-            <GlobalStyle />
             <Header />
             <ToastrComponent />
             <PageTransition route={router.route}>

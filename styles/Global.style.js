@@ -1,9 +1,12 @@
 import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
-  body {
-      color: ${(props) => props.theme.color} !important;
+html {
+color: ${(props) => props.theme.color} !important;
       background: ${(props) => props.theme.background} !important;
+}
+  body {
+      
       transition: all 490ms linear;
   }
 `;
