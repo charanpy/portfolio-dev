@@ -2,8 +2,8 @@ import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
   body {
-    color: ${(props) => props.theme.color};
-    background: ${(props) => props.theme.background};
+    color: ${(props) => props.theme.color} !important;
+    background: ${(props) => props.theme.background} !important;
     transition: all 500ms linear;
   }
 `;
