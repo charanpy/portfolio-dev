@@ -1,6 +1,10 @@
 const visitor = (req, res) => {
   return res.status(200).json({
-    ip: req.ip || req.connection.remoteAddress,
+    ip:
+      req.headers['x-forwarded-for'] ||
+      req.socket.remoteAddress ||
+      req.ip ||
+      req.connection.remoteAddress,
   });
 };
 
