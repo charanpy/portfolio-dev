@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Head from 'next/head';
 import MongoService from '../lib/MongoService';
 import CustomThemeProvider from '../providers/ThemeProvider';
@@ -13,6 +13,13 @@ import GlobalStyle from '../styles/Global.style';
 
 function MyApp({ Component, pageProps, router }) {
   MongoService();
+  useEffect(() => {
+    if (typeof window !== 'undefined' || window) {
+      if (navigator.userAgent.includes('Instagram')) {
+        window.location.href = process.env.NEXT_PUBLIC_URL;
+      }
+    }
+  }, []);
   return (
     <>
       <Head>
