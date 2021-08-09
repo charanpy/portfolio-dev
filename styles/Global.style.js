@@ -4,7 +4,7 @@ const GlobalStyle = createGlobalStyle`
   body {
       color: ${(props) => props.theme.color} !important;
       background: ${(props) => props.theme.background} !important;
-      transition: all 500ms linear;
+      transition: all 490ms linear;
   }
 `;
 
