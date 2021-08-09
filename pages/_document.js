@@ -33,7 +33,7 @@ export default class MyDocument extends Document {
         <Head>
           <link rel='manifest' href='/manifest.json' />
           <link rel='apple-touch-icon' href='/icons/apple-touch-icon.png' />
-          <meta name='theme-color' content='#fff' />
+          <meta name='theme-color' content='#000' />
           <link rel='preconnect' href='https://fonts.googleapis.com' />
           <link
             rel='preconnect'
