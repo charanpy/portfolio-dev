@@ -25,7 +25,7 @@ const SkillComponent = () => {
           </div>
           <div>
             <MobileComponent color={color} />
-            <Skill>Hybrid Apps</Skill>
+            <Skill>Native Apps</Skill>
           </div>
         </SkillWrapper>
       </SkillContainer>
