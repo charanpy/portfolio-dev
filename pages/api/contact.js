@@ -1,12 +1,5 @@
-import IPData from 'ipdata';
 import contactFormValidation from '../../utils/contact-validation';
 import contactFormSubscribe from '../../utils/contactMe';
-
-const cache = {
-  max: 1000,
-  maxAge: 10 * 60 * 1000,
-};
-const ipdata = new IPData(process.env.IP_TOKEN, cache);
 
 const contactMe = async (req, res) => {
   if (req.method !== 'POST') return;
@@ -22,10 +15,9 @@ const contactMe = async (req, res) => {
       message: validationMessage,
     });
   }
-  const { city, region, country_name, latitude, longitude } =
-    await ipdata.lookup();
-  message =
-    message + `${city},${region},${country_name},${latitude},${longitude}`;
+  message = `${message} ${
+    req.headers['x-forwarded-for'] || req.socket.remoteAddress || req.ip
+  }`;
   const data = {
     email,
     name,

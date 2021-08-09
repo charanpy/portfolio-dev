@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import ContactComponent from '../components/Contact/Contact.component';
 import Intro from '../components/Intro/Intro';
 import Container from '../layout/Container/Container.component';
@@ -9,11 +9,6 @@ import ProjectOverviewComponent from '../components/ProjectOverview/ProjectOverv
 import Seo from '../layout/Seo/Seo';
 
 const Home = () => {
-  useEffect(() => {
-    fetch('/api/visitor')
-      .then((res) => res.json())
-      .then((data) => console.log(data));
-  }, []);
   return (
     <>
       <Seo />

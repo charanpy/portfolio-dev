@@ -1,4 +1,4 @@
-import React, { useContext, useRef } from 'react';
+import React, { useContext, useRef, useState } from 'react';
 import ButtonComponent from '../Button/Button.component';
 import HeadingComponent from '../Heading/Heading.component';
 import InputComponent from '../Input/Input.component';
@@ -13,6 +13,7 @@ import submitContactData, { checkWindow, contactLimit } from './contactService';
 import { ToastrContext } from '../../providers/ToastrProvider';
 
 const ContactMeComponent = () => {
+  const [loading, setLoading] = useState(false);
   const { openAlert } = useContext(ToastrContext);
   const emailRef = useRef(null);
   const nameRef = useRef(null);
@@ -26,6 +27,7 @@ const ContactMeComponent = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
     const email = emailRef?.current?.value;
     const name = nameRef?.current?.value;
     const message = messageRef?.current.value;
@@ -37,6 +39,7 @@ const ContactMeComponent = () => {
       clearInput();
       return;
     }
+    setLoading((load) => !load);
     const [success, response] = await submitContactData({
       email,
       name,
@@ -46,6 +49,7 @@ const ContactMeComponent = () => {
       variant: success ? 'success' : 'error',
       title: response,
     });
+    setLoading((load) => !load);
     clearInput();
   };
   return (
@@ -67,8 +71,8 @@ const ContactMeComponent = () => {
           />
         </UserDetail>
         <TextArea placeholder='Message' required ref={messageRef} />
-        <ButtonComponent dark type='submit'>
-          Send
+        <ButtonComponent dark type='submit' disabled={loading}>
+          {loading ? 'SENDING...' : 'Send'}
         </ButtonComponent>
       </Form>
     </ContactMeContainer>
