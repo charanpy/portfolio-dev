@@ -6,6 +6,7 @@ import {
   BlogPageContainer,
   CenterContainer,
 } from '../../components/Blog/Blog.style';
+import { ProjectName } from '../../components/ProjectOverview/ProjectOverview.style';
 
 const Blog = ({ blogs }) => {
   return (
@@ -18,6 +19,15 @@ const Blog = ({ blogs }) => {
       <BlogPageContainer>
         <CenterContainer>
           <HeadingComponent mb>Blog</HeadingComponent>
+          <ProjectName>
+            <a
+              href='https://durgicharan81.medium.com/'
+              target='_blank'
+              rel='noreferrer'
+            >
+              Visit my Medium blogs
+            </a>
+          </ProjectName>
         </CenterContainer>
         <BlogComponent blogs={blogs} />
       </BlogPageContainer>

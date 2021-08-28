@@ -17,12 +17,12 @@ export const BlogWrapper = styled.div`
   width: 50vw;
   @media (max-width: 790px) {
     width: 100vw;
-    padding:2rem;
+    padding: 2rem;
   }
 `;
 
 export const CenterContainer = styled.div`
-  ${flex};
+  ${flexColumn};
   ${flexCenter};
 `;
 
