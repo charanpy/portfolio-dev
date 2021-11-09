@@ -1,26 +1,23 @@
-import nodemailer from 'nodemailer';
+import sgMail from '@sendgrid/mail';
 
-const contactFormSubscribe = async (email, password, data, to) => {
-  const transporter = nodemailer.createTransport({
-    service: 'gmail',
-    auth: {
-      user: email,
-      pass: password,
-    },
-  });
+sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
+const contactFormSubscribe = async (email, _, data, to) => {
   const mailOptions = {
-    from: `"Portfolio" ${data.email}`,
-    to: to,
-    subject: 'Contacting from Portfolio',
-    html: `<p>${data.email}</p><p>${data.name}</p><br /> <br/> <h1><b>${data.message}</b></h1>`,
+    from: `${email}`,
+    to,
+    subject: 'Hey! New Message from Portfolio',
+    html: `
+    <h1>New Message from your Portfolio</h1>
+    <p>Email:<strong>${data.email}</strong></p><p>Username:<strong>${data.name}</strong></p> <br/> 
+    <h2>Message</h2>
+    <p>${data.message}</p>`,
   };
 
   try {
-    await transporter.sendMail(mailOptions);
+    await sgMail.send(mailOptions);
     return [200, 'Message sent successfully'];
   } catch (error) {
-    console.log(error);
     return [500, 'Something went wrong!Please try again.'];
   }
 };

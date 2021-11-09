@@ -34,7 +34,7 @@ const ContactMeComponent = () => {
     const [isValid] = contactFormValidation(email, name, message);
     if (!isValid) return;
     const count = checkWindow(contactLimit);
-    if (count && count >= 1) {
+    if (count && count >= 3) {
       openAlert({ variant: 'success', title: 'Sent successfully' });
       clearInput();
       return;
