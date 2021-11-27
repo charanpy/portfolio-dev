@@ -4,6 +4,7 @@ import { flex, flexCenter } from '../../styles/common.style';
 export const ArrowContainer = styled.div`
   ${flex};
   ${flexCenter};
+  cursor: pointer;
 `;
 
 export const Arrow = styled.span`
