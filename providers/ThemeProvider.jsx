@@ -12,7 +12,6 @@ const CustomThemeProvider = ({ children }) => {
   const customTheme = useDarkMode(true, { storageKey: null, onChange: null });
   const theme = customTheme.value ? darkTheme : lightTheme;
   const [mounted, setMounted] = React.useState(false);
-  console.log(customTheme, 22);
   React.useEffect(() => {
     setMounted(true);
   }, []);
@@ -23,7 +22,6 @@ const CustomThemeProvider = ({ children }) => {
         JSON.stringify({ theme: !customTheme.value })
       );
     customTheme.toggle();
-    console.log('theme', customTheme);
   };
 
   const body = (
