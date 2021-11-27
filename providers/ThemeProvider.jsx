@@ -4,7 +4,7 @@ import { ThemeProvider } from 'styled-components';
 import { light as lightTheme, dark as darkTheme } from '../utils/theme';
 
 export const ThemeContext = React.createContext({
-  theme: false,
+  theme: true,
   toggleTheme: () => {},
 });
 

@@ -268,6 +268,17 @@ export const projects = {
     website: null,
     github: 'https://github.com/charanpy/shopify',
   },
+  realEstate12: {
+    key: 'realEstate12',
+    title: 'Real Estate',
+    description: 'Real Estate Web app using Rapido API',
+    technology: 'React Nextjs Chakra-UI Rapido API',
+    features: ['List Rent Property', 'List Buy Property', 'Search Property'],
+    image:
+      'https://static.wixstatic.com/media/1f823f_f7e0002192ae46be89befdecb1cf985f~mv2.png',
+    website: 'https://next-real-estate.vercel.app/',
+    github: 'https://github.com/charanpy/Next-Real-estate',
+  },
 };
 
 const {
@@ -291,6 +302,7 @@ const {
   appx6,
   natuors6,
   nexter6,
+  realEstate12,
 } = projects;
 
 export const featuredProject = [fashion138, twitter24, insta123, shopify1237];
@@ -306,6 +318,7 @@ export const frontend = [
 ];
 export const react = [
   fashion138,
+  realEstate12,
   shopify1237,
   insta123,
   whatsapp238,

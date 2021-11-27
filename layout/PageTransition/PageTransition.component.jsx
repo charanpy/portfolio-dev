@@ -3,8 +3,8 @@ import { motion } from 'framer-motion';
 
 const variants = {
   hidden: { opacity: 0 },
-  enter: { opacity: 1, delay: 1, duration: 5 },
-  exit: { opacity: 0, duration: 5 },
+  enter: { opacity: 1, delay: 1, duration: 2 },
+  exit: { opacity: 0, duration: 2 },
 };
 const PageTransition = ({ children, route }) => {
   return (
