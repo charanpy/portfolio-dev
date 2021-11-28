@@ -272,12 +272,28 @@ export const projects = {
     key: 'realEstate12',
     title: 'Real Estate',
     description: 'Real Estate Web app using Rapido API',
-    technology: 'React Nextjs Chakra-UI Rapido API',
+    technology: 'React Next.js Chakra-UI Rapido-API',
     features: ['List Rent Property', 'List Buy Property', 'Search Property'],
     image:
       'https://static.wixstatic.com/media/1f823f_f7e0002192ae46be89befdecb1cf985f~mv2.png',
     website: 'https://next-real-estate.vercel.app/',
     github: 'https://github.com/charanpy/Next-Real-estate',
+  },
+  restaurant12: {
+    key: 'restaurant12',
+    title: 'Recipe Finder',
+    description: 'Recipe Finder Web app using Edamam API',
+    technology: 'React Next.js Tailwind-CSS Edamam-API',
+    features: [
+      'List Recipe',
+      'List Trending Recipe',
+      'Search Recipe',
+      'Recipe Description',
+    ],
+    image:
+      'https://static.wixstatic.com/media/1f823f_f0e7341586284a2698a5d8ab75e43b93~mv2.png',
+    website: 'https://next-restaurant-nu.vercel.app/',
+    github: 'https://github.com/charanpy/Next-Restaurant',
   },
 };
 
@@ -303,6 +319,7 @@ const {
   natuors6,
   nexter6,
   realEstate12,
+  restaurant12,
 } = projects;
 
 export const featuredProject = [fashion138, twitter24, insta123, shopify1237];
@@ -311,6 +328,7 @@ export const frontend = [
   twitter24,
   whatsapp238,
   realEstate12,
+  restaurant12,
   taskmanager238,
   tictactoe24,
   todo23,
@@ -320,6 +338,7 @@ export const frontend = [
 export const react = [
   fashion138,
   realEstate12,
+  restaurant12,
   shopify1237,
   insta123,
   whatsapp238,
