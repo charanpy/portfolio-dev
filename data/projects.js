@@ -295,6 +295,21 @@ export const projects = {
     website: 'https://next-restaurant-nu.vercel.app/',
     github: 'https://github.com/charanpy/Next-Restaurant',
   },
+  googleSearch12: {
+    key: 'googleSearch12',
+    title: 'Google Search',
+    description: 'Google Search web app using Rapido API',
+    technology: 'React Tailwind-CSS Rapido-API',
+    features: [
+      'Search Results',
+      'News',
+      'Images',
+      'Videos'
+    ],
+    image: 'https://static.wixstatic.com/media/1f823f_1ef92c8062bc475086ae5a46595d2938~mv2.png',
+    website: 'https://google-search-beta.vercel.app',
+    github: 'https://github.com/charanpy/google-search'
+  }
 };
 
 const {
@@ -320,6 +335,7 @@ const {
   nexter6,
   realEstate12,
   restaurant12,
+  googleSearch12
 } = projects;
 
 export const featuredProject = [fashion138, twitter24, insta123, shopify1237];
@@ -329,6 +345,7 @@ export const frontend = [
   whatsapp238,
   realEstate12,
   restaurant12,
+  googleSearch12,
   taskmanager238,
   tictactoe24,
   todo23,
@@ -339,6 +356,7 @@ export const react = [
   fashion138,
   realEstate12,
   restaurant12,
+  googleSearch12,
   shopify1237,
   insta123,
   whatsapp238,
